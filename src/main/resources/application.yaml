@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/study_helper?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: LiangDan1026!
+  mvc:
+    format:
+      date: yyyy-MM-dd
+
+server:
+  error:
+    include-message: always
+    include-stacktrace: always
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.studyhelper.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+jwt:
+  secret: studyhelper-secret-key-1234567890-abcdefghijklmn
+  expire: 86400000
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn

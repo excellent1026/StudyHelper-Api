@@ -1,0 +1,22 @@
+# IDEA配置文件
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven编译产物 + maven wrapper（你之前说要屏蔽它）
+target/
+.mvn/
+mvnw
+mvnw.cmd
+
+# 日志文件
+*.log
+logs/
+app-log*.txt
+boot-err*.txt
+boot-out*.txt
+compile*.txt
+
+# 系统文件
+.DS_Store
